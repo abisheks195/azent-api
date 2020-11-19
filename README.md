@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# MERN Azent API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> CRUD API to get all the universitites from the database and to add, update and delete from it. Also to search for any university based on the name, country code or the domain.
 
-## Available Scripts
+## Quick Start
 
-In the project directory, you can run:
+If you are using a local mongodb server, add the localhost URI for Mongodb directly to app.js or if you're using Mongodb from cloud, you can create a new .env file and store your URI in variable named MONGODB. Similarly, for elasticsearch, if it is running locally, you can directly add it to config/esconfig.js or if you're connecting to elasticsearch cloud, then you can store your elasticsearch URI in a variable named ESHOST and your username and password in the format , 'username:password', in a variable named ESHTTPAUTH in the .env file. Also make sure to change the port variable in app.js to 8000 or any port of your choice and store it in a variable named PORT in the .env file.
 
-### `npm start`
+```bash
+# Install dependencies for backend server
+npm install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Install dependencies for frontend client
+npm run client-install
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Run the backend nodejs(express) server only
+npm run server
 
-### `npm test`
+# Run the frontend React client only
+npm run client
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Run the client & server with concurrently
+npm run dev
 
-### `npm run build`
+# Backend Server runs on http://localhost:8000 and Frontend Client on http://localhost:3000
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deployment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+There is a Heroku post build script in package.json so that you do not have to compile your React frontend manually, it is done on the server. Simply push to Heroku and it will build and load the client index.html page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Author
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Abishek Srinivasan
